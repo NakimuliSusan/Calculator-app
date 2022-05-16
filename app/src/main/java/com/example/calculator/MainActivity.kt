@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 etNumber1.setError("Input number")
                 return@setOnClickListener
             }
-            add(int_Number1.toInt(),int_Number2.toInt())
+            add(int_Number1.toDouble(),int_Number2.toDouble())
         }
         btnSubtract.setOnClickListener {
             tvShow .text = ""
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                 etNumber1.setError("Input number")
                 return@setOnClickListener
             }
-            subtract(int_Number1.toInt(),int_Number2.toInt())
+            subtract(int_Number1.toDouble(),int_Number2.toDouble())
         }
         btnMultiply.setOnClickListener {
             tvShow.text = ""
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            multiply(int_Number1.toInt(),int_Number2.toInt())
+            multiply(int_Number1.toDouble(),int_Number2.toDouble())
         }
         btnModulus.setOnClickListener {
             tvShow.text = ""
@@ -84,23 +84,23 @@ class MainActivity : AppCompatActivity() {
                 etNumber1.setError("Input number")
                 return@setOnClickListener
             }
-            modulus(int_Number1.toInt(),int_Number2.toInt())
+            modulus(int_Number1.toDouble(),int_Number2.toDouble())
 
     }
     }
-    fun add (int_Number1:Int, int_Number2: Int) {
+    fun add (int_Number1:Double, int_Number2:Double) {
         val sum = int_Number1 + int_Number2
         tvShow.text = sum.toString()
     }
-    fun subtract (int_Number1: Int,int_Number2: Int){
+    fun subtract (int_Number1: Double,int_Number2: Double){
         val difference = int_Number1 - int_Number2
         tvShow.text = difference.toString()
     }
-    fun multiply (int_Number1: Int,int_Number2: Int) {
+    fun multiply (int_Number1:Double,int_Number2:Double) {
         val result = int_Number1 * int_Number2
         tvShow.text = result.toString()
     }
-    fun modulus (int_Number1: Int,int_Number2: Int) {
+    fun modulus (int_Number1:Double,int_Number2:Double) {
         val outcome = int_Number1 % int_Number2
         tvShow.text = outcome.toString()
     }
